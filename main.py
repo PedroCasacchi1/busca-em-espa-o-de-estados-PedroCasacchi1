@@ -1,9 +1,9 @@
 """Script de demonstração — útil para depurar manualmente."""
 
-from puzzle.state import State
 from algorithms.bfs import BFS
 from algorithms.dfs import DFS
 from algorithms.a_star import AStar
+from puzzle.state import State
 
 
 def print_result(name: str, result):
@@ -21,11 +21,10 @@ def print_result(name: str, result):
 
 
 if __name__ == "__main__":
-    initial = State((2, 8, 3, 1, 6, 4, 7, 0, 5))   # ~20 movimentos até a solução
-
+    initial = State((1, 2, 3, 4, 5, 6, 7, 0, 8))
     print("Estado inicial:")
     print(initial)
 
-    print_result("BFS",  BFS().search(initial))
-    print_result("DFS",  DFS().search(initial))
-    print_result("A*",   AStar().search(initial))
+    print_result("BFS", BFS().search(initial))
+    print_result("DFS", DFS().search(initial))
+    print_result("A*", AStar().search(initial))
